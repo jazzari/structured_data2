@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "JobPosting",
+      "datePosted": "<%= @resource.created_at %>",
+      "description": "<%= @resource.short_description %>",
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "<%= @resource.location_info %>"
+        }
+      },
+      "skills": "<%= @resource.facts %>",
+      "specialCommitments": "<%= @resource.minimum_time_commitment_amount_type %>",
+      "title": "<%= @resource.title %>",
+      "workHours": "<%= @resource.workhour %>",
+      "validThrough": "<%= @resource.open_to %>"
+    }
+  ]
+}
+
+</script>

@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "<%= @resource.title %>",
+      "startDate": "<%= @resource.starts_at %>",
+      "endDate": "<%= @resource.ends_at %>",
+      "maximumAttendeeCapacity": "<%= @resource.amount_of_spots %>",
+      "offers": {
+        "@type": "Offer",
+        "price": "<%= @resource.cost %>",
+        "priceCurrency": "SEK"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "<%= @resource.address %>"
+      }
+    }
+  ]
+}
+
+</script>

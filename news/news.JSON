@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "headline": "<%= @resource.meta_title %>",
+      "alternativeHeadline": "<%= @resource.subtitle %>",
+      "abstract": "<%= @resource.short_description %>",
+      "articleBody": "<%= @resource.meta_description %>",
+      "dateCreated": "@resource.created_at",
+      "dateModified": "@resource.updated_at",
+      "datePublished": "<%= @resource.publish_at %>"
+    }
+  ]
+}

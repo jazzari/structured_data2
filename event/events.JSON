@@ -1,0 +1,33 @@
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "<%= @resource.title %>",
+      "startDate": "<%= @resource.starts_at %>",
+      "description": "<%= @resource.meta_description %>",
+      "maximumAttendeeCapacity": "<%= @resource.amount_of_spots %>",
+      "offers": {
+        "@type": "Offer",
+        "price": "<%= @resource.cost %>",
+        "priceCurrency": "SEK",
+        "validFrom": "<%= @resource.open_from %>",
+        "validThrough": "<%= @resource.open_to %>"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "<%= @resource.address %>"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "<%= @resource.contact_person_name %>",
+        "email": "<%= @resource.contact_person_email %>",
+        "description": "<%= @resource.contact_person_description %>",
+      } 
+    }
+  ]
+}
+
+</script>
