@@ -5,7 +5,8 @@
   "@graph": [
     {
       "@type": "Organization",
-      "name": "<%= @resource.name %>",
+   
+      "name": "<%= @resource.group_name %>",
       "url": "<%= @resource.website_url %>",
       "sameAs": [
         "<%= @resource.instagram_url %>",

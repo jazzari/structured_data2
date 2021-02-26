@@ -6,7 +6,8 @@
     {
       "@type": "JobPosting",
       "datePosted": "<%= @resource.created_at %>",
-      "description": "<%= @resource.short_description %>",
+   
+      "description": "<%= @resource.description %>",
       "jobLocation": {
         "@type": "Place",
         "address": {

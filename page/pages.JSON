@@ -8,7 +8,8 @@
       "name": "<%= @resource.title %>",
       "datePublished": "<%= @resource.publish_at %>",
       "dateModified": "<%= @resource.updated_at %>",
-      "description": "<%= @resource.short_description %>",
+     
+      "description": "<%= @resource.body %>",
       "breadcrumb": {
         "@id": "https://yoast.com/wordpress-seo/#breadcrumb"
       }

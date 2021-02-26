@@ -6,6 +6,7 @@
     {
       "@type": "AboutPage",
       "name": "<%= @resource.title %>",
+      "description": "<%= @resource.body %>",
       "startDate": "<%= @resource.starts_at %>",
       "endDate": "<%= @resource.ends_at %>",
       "maximumAttendeeCapacity": "<%= @resource.amount_of_spots %>",

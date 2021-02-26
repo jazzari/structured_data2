@@ -7,7 +7,8 @@
       "@type": "Event",
       "name": "<%= @resource.title %>",
       "startDate": "<%= @resource.starts_at %>",
-      "description": "<%= @resource.meta_description %>",
+      
+      "description": "<%= @resource.body %>",
       "maximumAttendeeCapacity": "<%= @resource.amount_of_spots %>",
       "offers": {
         "@type": "Offer",
