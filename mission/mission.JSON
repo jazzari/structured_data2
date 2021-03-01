@@ -5,8 +5,8 @@
   "@graph": [
     {
       "@type": "JobPosting",
+      "hiringOrganization": "<%= @resource.organization_group %>",
       "datePosted": "<%= @resource.created_at %>",
-   
       "description": "<%= @resource.description %>",
       "jobLocation": {
         "@type": "Place",

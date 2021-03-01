@@ -5,16 +5,9 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "<%= @resource.title %>",
-      "datePublished": "<%= @resource.publish_at %>",
-      "dateModified": "<%= @resource.updated_at %>",
-     
-      "description": "<%= @resource.body %>",
-      "breadcrumb": {
-        "@id": "https://yoast.com/wordpress-seo/#breadcrumb"
-      }
-    },
-  }
+      "name": "<%= @resource.title %>",  
+      "description": "<%= @resource.body %>"
+    }
 ]
 }
 

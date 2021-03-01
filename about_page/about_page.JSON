@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+          "@type": "AboutPage",
+          "name": "<%= @resource.title %>",
+          "description": "<%= @resource.body %>"
+        }
+    ]
+}
+
+</script>

@@ -1,0 +1,32 @@
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NGO",
+   
+      "legalName": "<%= @resource.group_name %>",
+      "url": "<%= @resource.website_url %>",
+      "sameAs": [
+        "<%= @resource.instagram_url %>",
+        "<%= @resource.facebook_url %>",
+        "<%= @resource.twitter_url %>",
+        "<%= @resource.linkedin_url %>"
+      ],
+      "email": "<%= @resource.email_address %>",
+      "telephone": "<%= @resource.phone_number %>",
+      "address": 
+        [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "<%= @resource.postal_locality %>",
+            "postalCode": "<%= @resource.postal_code %>",
+            "streetAddress": "<%= @resource.postal_address %>"
+          }
+        ] 
+    }
+  ]
+}
+
+</script>

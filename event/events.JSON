@@ -4,29 +4,23 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Event",
-      "name": "<%= @resource.title %>",
-      "startDate": "<%= @resource.starts_at %>",
-      
-      "description": "<%= @resource.body %>",
-      "maximumAttendeeCapacity": "<%= @resource.amount_of_spots %>",
-      "offers": {
-        "@type": "Offer",
-        "price": "<%= @resource.cost %>",
-        "priceCurrency": "SEK",
-        "validFrom": "<%= @resource.open_from %>",
-        "validThrough": "<%= @resource.open_to %>"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "<%= @resource.address %>"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "name": "<%= @resource.contact_person_name %>",
-        "email": "<%= @resource.contact_person_email %>",
-        "description": "<%= @resource.contact_person_description %>",
-      } 
+  		"@type": "EducationEvent",
+  		"name": "<%= @resource.title %>",
+  		"description": "<%= @resource.body %>",
+      	"startDate": "<%= @resource.starts_at %>",
+		"endDate": "<%= @resource.ends_at %>",
+     	"maximumAttendeeCapacity": "<%= @resource.amount_of_spots %>",
+		"organizer" : {
+			"name": "<%= @resource.contact_person_name %>",
+			"image": "<%= @resource.contact_person_image %>"
+		 },
+  		"location": {
+    		"@type": "Place",
+    		"address": {
+      		"@type": "PostalAddress",
+      			"streetAddress": "<%= @resource.address %>"
+    }
+      }
     }
   ]
 }

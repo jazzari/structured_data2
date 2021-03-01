@@ -1,3 +1,5 @@
+<script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -5,11 +7,9 @@
       "@type": "NewsArticle",
       "headline": "<%= @resource.meta_title %>",
       "alternativeHeadline": "<%= @resource.subtitle %>",
-      "abstract": "<%= @resource.body %>",
-      "articleBody": "<%= @resource.body %>",
-      "dateCreated": "@resource.created_at",
-      "dateModified": "@resource.updated_at",
-      "datePublished": "<%= @resource.publish_at %>"
+      "abstract": "<%= @resource.intro %>",
+      "articleBody": "<%= @resource.body %>"
     }
   ]
 }
+</script>
