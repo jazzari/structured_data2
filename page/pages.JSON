@@ -1,14 +1,18 @@
 <script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "name": "<%= @resource.title %>",  
-      "description": "<%= @resource.body %>"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "<%= @resource.title %>",
+        "datePublished": "<%= @resource.publish_at %>",
+        "dateModified": "<%= @resource.updated_at %>",
+        "description": "<%= @resource.body %>"
+      }
     }
-]
+  ]
 }
-
-</script>
+  </script>
+  // Maybe here we don't want datePublished or dateModified?
+  // You could merge the pull request, then create a branch and change it back...
+  
